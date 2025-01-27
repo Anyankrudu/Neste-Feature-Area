@@ -1,5 +1,13 @@
 :root {
   --primary: #0000cd;
+  --text: #29283f;
+  --gray: #eaeaec;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 * {
@@ -9,51 +17,79 @@
 }
 
 body {
-  font-family: inter, sans-serif;
-  font-size: 16px;
-  height: 100vh;
-  width: 100vw;
   display: grid;
   place-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-size: 16px;
+  font-family: Poppins, sans-serif;
 }
 
 h4 {
   font-size: 1.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .container {
-  max-width: clamp(62rem, 75vw, 86.3rem);
-  min-width: 62rem;
-  padding: 2.5rem;
+  margin: auto;
+  min-width: 70vw;
+  min-height: 40vh;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: clamp(30rem, 70vw, 64.2rem);
   box-shadow: rgba(0, 0, 0, 0.35) 20px 20px 80px;
+  padding: 2rem;
+  gap: 0.6rem;
 }
 
 .box_primary {
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
-  width: 100%;
-  font-size: 0.8rem;
-  gap: 1.3rem;
+  flex: 1 1 20.85rem;
 }
 
 .box_secondary {
   display: flex;
-  gap: 1.5rem;
-  flex: 2 1 38.3rem;
+  flex-wrap: wrap;
+  flex: 2 1 32rem;
+  gap: 0.3rem;
+  align-self: flex-end;
+  flex-direction: row;
+}
+
+.box_secondary p {
+  font-size: 0.8rem;
+  align-self: center;
+  flex: 0 1 4rem;
 }
 
 .text_field {
-  flex: 1 1 26rem;
+  width: 100%;
   height: 2.5rem;
+}
+
+.all_box_services {
+  display: flex;
+  gap: 0.4rem;
+  flex: 0 0 24rem;
+}
+
+.box_secondary a {
+  display: flex;
+  gap: 0.4rem;
+  align-self: flex-end;
+  border: 1px solid var(--gray);
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding: 0.4rem;
+  border-radius: 0.9rem;
+  flex: 2 0 6rem;
 }
 
 .icon {
   width: 0.8rem;
   height: 0.8rem;
-}
-
-.box_secondary a {
-  display: flex;
-  max-width: clamp(8rem, 2.5vw, 10rem);
 }

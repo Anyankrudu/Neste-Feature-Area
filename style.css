@@ -2,68 +2,72 @@
   --primary: #0000cd;
   --text: #29283f;
   --gray: #eaeaec;
+  --white: #ffffff;
 }
 
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   display: grid;
   place-items: center;
   height: 100vh;
-  width: 100vw;
   font-size: 16px;
   font-family: Poppins, sans-serif;
+  background: var(--text);
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: clamp(30rem, 70vw, 60.2rem);
+  background: white;
+  min-width: 30rem;
+  min-height: 10rem;
+  padding: 2rem;
+  gap: 0.4rem;
 }
 
 h4 {
-  font-size: 1.5rem;
-  margin-bottom: 0.8rem;
-}
-
-.container {
-  margin: auto;
-  min-width: 70vw;
-  min-height: 40vh;
+  margin-left: 0;
+  font-size: 1.6rem;
 }
 
 .boxes {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  max-width: clamp(30rem, 70vw, 64.2rem);
-  box-shadow: rgba(0, 0, 0, 0.35) 20px 20px 80px;
-  padding: 2rem;
-  gap: 0.6rem;
+  width: 100%;
+  gap: 0.8rem;
 }
 
 .box_primary {
-  flex: 1 1 20.85rem;
+  flex: 1 1 23.3rem;
+  max-width: 35.85rem;
+  margin-right: 0px;
 }
 
 .box_secondary {
   display: flex;
   flex-wrap: wrap;
-  flex: 2 1 32rem;
+  flex: 1 1 32rem;
+  max-width: 32rem;
   gap: 0.3rem;
-  align-self: flex-end;
-  flex-direction: row;
 }
 
 .box_secondary p {
   font-size: 0.8rem;
+  line-height: 1.2rem;
   align-self: center;
-  flex: 0 1 4rem;
+  flex: 1 1 5.5rem;
 }
 
 .text_field {
@@ -73,23 +77,34 @@ h4 {
 
 .all_box_services {
   display: flex;
+  flex-wrap: nowrap;
   gap: 0.4rem;
-  flex: 0 0 24rem;
+  flex: 1 1 26rem;
 }
 
-.box_secondary a {
+.all_box_services a {
   display: flex;
-  gap: 0.4rem;
-  align-self: flex-end;
+  flex-wrap: nowrap;
+  gap: 0.3rem;
+  justify-content: center;
   border: 1px solid var(--gray);
   text-decoration: none;
   font-size: 0.8rem;
-  padding: 0.4rem;
-  border-radius: 0.9rem;
-  flex: 2 0 6rem;
+  padding: 0.8rem 0.1rem;
+  border-radius: 1.2rem;
+  flex: 0 0 5.9rem;
+}
+
+.all_box_services a:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.all_box_services a:hover .icon {
+  fill: var(--white);
 }
 
 .icon {
-  width: 0.8rem;
-  height: 0.8rem;
+  width: 0.9rem;
+  height: 0.9rem;
 }
